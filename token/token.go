@@ -37,3 +37,17 @@ const (
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
 )
+
+// 定数に基づいたキーワード
+var keywords = map[string]TokenType {
+	"fn":  FUNCTION,
+	"let": LET,
+}
+
+// keywordsテーブルをチェックして渡された引数がキーワードかどうかを判定
+func LookupIdent(ident string) TokenType {
+	if tok, ok := keywords[ident]; ok {
+		return tok
+	}
+	return IDENTIFIER
+}
