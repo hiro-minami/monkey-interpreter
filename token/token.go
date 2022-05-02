@@ -20,14 +20,14 @@ const (
 	INTEGER    = "INTEGER"
 
 	// 演算子
-	ASSIGN = "="
-	PLUS   = "+"
-	MINUS = "-"
-	BANG = "!"
+	ASSIGN   = "="
+	PLUS     = "+"
+	MINUS    = "-"
+	BANG     = "!"
 	ASTERISK = "*"
-	SLASH = "/"
+	SLASH    = "/"
 
-	LESSTHAN = "<"
+	LESSTHAN    = "<"
 	GREATERTHAN = ">"
 
 	// デリミタ
@@ -43,12 +43,22 @@ const (
 	// キーワード
 	FUNCTION = "FUNCTION"
 	LET      = "LET"
+	TRUE     = "TRUE"
+	FALSE    = "FALSE"
+	IF       = "IF"
+	ELSE     = "ELSE"
+	RETURN   = "RETURN"
 )
 
 // 定数に基づいたキーワード
-var keywords = map[string]TokenType {
-	"fn":  FUNCTION,
-	"let": LET,
+var keywords = map[string]TokenType{
+	"fn":     FUNCTION,
+	"let":    LET,
+	"true":   TRUE,
+	"false":  FALSE,
+	"if":     IF,
+	"else":   ELSE,
+	"return": RETURN,
 }
 
 // keywordsテーブルをチェックして渡された引数がキーワードかどうかを判定
