@@ -30,6 +30,9 @@ const (
 	LESSTHAN    = "<"
 	GREATERTHAN = ">"
 
+	EQUAL = "=="
+	NOTEQUAL = "!="
+
 	// デリミタ
 	COMMA     = ","
 	SEMICOLON = ";"
